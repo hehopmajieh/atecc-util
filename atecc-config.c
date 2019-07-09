@@ -31,19 +31,19 @@ void dump_config(uint8_t config_zone[ATCA_ECC_CONFIG_SIZE])
     }
     printf("\n");
 
-    // printf("============= Some parsed values: ============= \n");
-    // printf("Counter 0 value: %u [", parse_counter_value(config_zone + CONFIG_ZONE_COUNTER0_OFFSET));
-    // for (size_t i=0; i< CONFIG_ZONE_COUNTER0_LENGTH; ++i) {
-    //     printf("%02X ", config_zone[CONFIG_ZONE_COUNTER0_OFFSET + i]);
-    // }
-    // printf("]\n");
+     printf("============= Some parsed values: ============= \n");
+     printf("Counter 0 value: %u [", parse_counter_value(config_zone + CONFIG_ZONE_COUNTER0_OFFSET));
+     for (size_t i=0; i< CONFIG_ZONE_COUNTER0_LENGTH; ++i) {
+         printf("%02X ", config_zone[CONFIG_ZONE_COUNTER0_OFFSET + i]);
+     }
+     printf("]\n");
 
 
-    // printf("Counter 1 value: %u [", parse_counter_value(config_zone + CONFIG_ZONE_COUNTER1_OFFSET));
-    // for (size_t i=0; i< CONFIG_ZONE_COUNTER1_LENGTH; ++i) {
-    //     printf("%02X ", config_zone[CONFIG_ZONE_COUNTER1_OFFSET + i]);
-    // }
-    // printf("]\n");
+     printf("Counter 1 value: %u [", parse_counter_value(config_zone + CONFIG_ZONE_COUNTER1_OFFSET));
+     for (size_t i=0; i< CONFIG_ZONE_COUNTER1_LENGTH; ++i) {
+         printf("%02X ", config_zone[CONFIG_ZONE_COUNTER1_OFFSET + i]);
+     }
+     printf("]\n");
 
     uint16_t locks = config_zone[CONFIG_ZONE_SLOTLOCKED_OFFSET] | config_zone[CONFIG_ZONE_SLOTLOCKED_OFFSET + 1] << 8;
 
